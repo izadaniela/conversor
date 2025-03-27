@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monetis</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icon-css/css/flag-icon.min.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="moedas.png" alt="Logo" class="logo">
+    </div>
+    <!-- Página Conversor -->
+    <div class="container">
+        <h1>Conversor de Moedas</h1>
+        <div class="converter">
+            <div class="inputs">
+                <input type="number" id="valor" placeholder="Valor" />
+                
+                <div class="moeda">
+                    <span id="bandeiraDe" class="flag-icon"></span>
+                    <select id="moedaDe" onchange="atualizarBandeira('de')">
+                        <option value="BRL">Real (BRL)</option>
+                        <option value="USD">Dólar (USD)</option>
+                        <option value="GBP">Libra Esterlina (GBP)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="JPY">Iene (JPY)</option>
+                        <option value="CAD">Dólar Canadense (CAD)</option>
+                        <option value="AUD">Dólar Australiano (AUD)</option>
+                        <option value="CHF">Franco Suíço (CHF)</option>
+                        <option value="CNY">Yuan Chinês (CNY)</option>
+                        <option value="INR">Rúpia Indiana (INR)</option>
+                        <option value="MXN">Peso Mexicano (MXN)</option>
+                        <option value="ZAR">Rand Sul-Africano (ZAR)</option>
+                    </select>
+                </div>
+
+                <span>para</span>
+
+                <div class="moeda">
+                    <span id="bandeiraPara" class="flag-icon"></span>
+                    <select id="moedaPara" onchange="atualizarBandeira('para')">
+                        <option value="USD">Dólar (USD)</option>
+                        <option value="BRL">Real (BRL)</option>
+                        <option value="GBP">Libra Esterlina (GBP)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="JPY">Iene (JPY)</option>
+                        <option value="CAD">Dólar Canadense (CAD)</option>
+                        <option value="AUD">Dólar Australiano (AUD)</option>
+                        <option value="CHF">Franco Suíço (CHF)</option>
+                        <option value="CNY">Yuan Chinês (CNY)</option>
+                        <option value="INR">Rúpia Indiana (INR)</option>
+                        <option value="MXN">Peso Mexicano (MXN)</option>
+                        <option value="ZAR">Rand Sul-Africano (ZAR)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="converterBtn">Converter</button>
+
+            <div id="resultado">
+                <p id="valorConvertido">-</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

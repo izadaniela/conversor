@@ -1,0 +1,188 @@
+/* Estilos padrão */
+.logo-container {
+    position: absolute;   /* Posiciona a logo de forma absoluta */
+    top: 50px;            /* Distância do topo da tela */
+    left: 50%;            /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para o centro exato */
+    z-index: 10;          /* Garante que a logo fique sobre outros elementos */
+}
+
+.logo {
+    width: 120px;         /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    color: #000000;
+    font-size: 2rem;
+    margin-top: 0;
+}   
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+    gap: 10px;
+    font-size: 20px;
+    margin-top: -10%; /* Espaço entre a logo e o conversor */
+}
+
+.converter {
+    background-color: #f2efe6;
+    padding: 30px;
+    border-radius: 8px;
+    width: 850px;
+    text-align: left;
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+input, select {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #f2efe6;;
+    border-radius: 5px;
+    width: 200px;
+    background-color: #959492;
+}
+
+.moeda {
+    display: flex;
+    align-items: center;
+}
+
+.moeda select {
+    margin-left: 10px;
+    width: 200px;
+}
+
+.flag-icon {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 90%;
+    background-color: #36d262;
+    color:  #ffffff;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+    width: auto;
+}
+
+button:hover {
+    background-color: #1a953d;
+}
+
+#resultado {
+    margin-top: -45px;
+    font-size: 20px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+    .converter {
+        width: 80%;  /* Reduzir a largura do conversor */
+    }
+
+    .inputs {
+        flex-direction: column;  /* Colocar os inputs em coluna */
+        align-items: stretch;    /* Deixar os inputs do tamanho completo */
+    }
+
+    input, select {
+        width: 100%;  /* Inputs e selects ocupam toda a largura disponível */
+        margin-bottom: 10px; /* Espaçamento entre os inputs */
+    }
+
+    button {
+        margin-left: 0;  /* Ajusta a posição do botão */
+        width: 100%;  /* O botão ocupa toda a largura */
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;  /* Reduzir o tamanho do título */
+    }
+
+    .container {
+        font-size: 18px;  /* Ajusta o tamanho da fonte */
+        padding: 10px;    /* Adiciona um pouco de padding para não colidir com as bordas */
+    }
+
+    .converter {
+        width: 100%;  /* Converter ocupa toda a largura da tela */
+        padding: 20px;  /* Ajusta o padding */
+    }
+
+    .inputs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input, select {
+        width: 100%;
+    }
+
+    button {
+        margin-top: 10px;
+        width: 100%;  /* O botão ocupa toda a largura */
+    }
+}
+
+/* Responsividade para telas muito pequenas (exemplo: smartphones em modo retrato) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;  /* Ajustar o título para caber em telas pequenas */
+    }
+
+    .container {
+        font-size: 16px;  /* Reduzir o tamanho da fonte */
+    }
+
+    .converter {
+        width: 100%;
+        padding: 15px;  /* Ajustar o padding */
+    }
+
+    .inputs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input, select {
+        width: 100%;
+    }
+
+    button {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    #resultado {
+        font-size: 16px;  /* Reduzir o tamanho da fonte do resultado */
+    }
+}
